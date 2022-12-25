@@ -1,0 +1,34 @@
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= config.title %>
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @<%= config.author %>
+        </div>
+        <div>Authorized with <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license</div>
+        <div>Based on the <a href="https://hexo.io/">Hexo Engine</a> & <a href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a> with <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html#2764">❤</a></div>
+        <span id="busuanzi_container_site_pv">
+            本站访问量：<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        &nbsp;
+        <span id="busuanzi_container_site_uv">
+            您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
+        </span>
+        <div id="hitokoto"><a href="#">获取中...</a></div>
+        <% if (theme.footer.ICP.enable) { %>
+        <div>
+            备案号：
+            <% if (theme.footer.ICP.link) { %>
+            <a href="<%= theme.footer.ICP.link %>">
+            <%= theme.footer.ICP.code %>
+            </a>
+            <% } else { %>
+            <%= theme.footer.ICP.code %>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+
+</footer>
